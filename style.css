@@ -1,3 +1,5 @@
+/* HTML */
+
 * {
     border: 0;
     margin: 0;
@@ -12,6 +14,7 @@
     width: 100vw;
 }
 
+/* Header */
 .header {
     grid-column: 2 / 3;
     display: grid;
@@ -25,6 +28,7 @@
     display: flex;
     align-items: center;
     padding: 16px;
+    gap: 16px;
 }
 
 .search-bar input {
@@ -32,7 +36,10 @@
     border-radius: 5px;
     background: #bae6fd;
     width: 67%;
+}
 
+.search-bar input:focus {
+    border: 1px solid #0c4a6e;
 }
 
 .search-bar img {
@@ -45,10 +52,16 @@
     gap: 16px;
     padding: 16px;
     justify-content: flex-end;
+    align-items: center;
 }
 
 .profile-tab img {
     width: 2rem;
+}
+
+.profile-tab img:hover {
+    transform: scale(1.05);
+    cursor: pointer;
 }
 
 .header-greeting {
@@ -78,13 +91,15 @@
     padding: 16px;
 }
 
+/* Sidebar */
 .sidebar {
-    background: linear-gradient(to bottom, #0284c7, #0c4a6e);
+    background: #0c4a6e;
     grid-column: 1 / 2;
     grid-row: 1 / 3;
     display: grid;
     grid-template-rows: auto auto 1fr;
     gap: 32px;
+    color: white;
 }
 
 .logo {
@@ -108,7 +123,7 @@
 
 .sidebar li {
     display: flex;
-    gap: 16px;
+    gap: 32px;
     align-items: center;
     padding-left: 16px;
 }
@@ -118,17 +133,21 @@
 }
 
 .sidebar ul img:hover {
-    transform: scale(1.05);
     cursor: pointer;
 }
 
-.sidebar ul p:hover {
-    transform: scale(1.05);
+.sidebar ul li p:hover {
     cursor: pointer;
+    border-bottom: 1px solid white;
 }
 
+.sidebar ul li img:hover ~ p {
+    border-bottom: 1px solid white;
+}
+
+/* Main content */
 .content {
-    background-color: #bae6fd;
+    background-color: #cffafe;
     grid-column: 2 / 3;
     display: grid;
     grid-template-columns: 3fr 1fr;
