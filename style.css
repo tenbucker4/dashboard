@@ -12,7 +12,6 @@
     grid-template-columns: 1fr 3fr;
     grid-template-rows: auto 4fr;
     height: 100vh;
-    width: 100vw;
 }
 
 /* Header */
@@ -37,6 +36,7 @@
     border-radius: 5px;
     background: #bae6fd;
     width: 67%;
+    height: 1.5rem;
 }
 
 .search-bar input:focus {
@@ -170,7 +170,7 @@
 
 .projects {
     display: grid;
-    grid-template-columns: auto auto 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto 1fr;
     gap: 16px;
     padding: 16px;
@@ -181,9 +181,25 @@
 }
 
 .card {
-    height: 150px;
-    width: 150px;
+    height: fit-content;
+    width: fit-content;
     background-color: white;
+}
+
+.card h3, .card p {
+    padding: 8px;
+}
+
+.card .project-icons {
+    display: flex;
+    justify-content: flex-end;
+    padding: 8px;
+    gap: 4px;
+}
+
+.card .project-icons img:hover {
+    cursor: pointer;
+    transform: scale(1.1);
 }
 
 .side-content {
@@ -192,10 +208,6 @@
     padding: 16px;
 }
 
-.side-content .card {
-    width: 100px;
-    height: 100px;
-}
 
 .announcements {
     display: flex;
