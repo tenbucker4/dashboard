@@ -166,34 +166,49 @@
     grid-column: 2 / 3;
     display: grid;
     grid-template-columns: 3fr 1fr;
+    overflow: auto;
 }
 
 .projects {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto 1fr;
-    gap: 16px;
     padding: 24px;
 }
 
-.projects p {
-    grid-column: 1 / 4;
+.projects h3 {
+    padding-bottom: 24px;
+}
+
+.projects .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-auto-rows: 250px;
+    gap: 16px;
 }
 
 .card {
-    height: fit-content;
-    width: fit-content;
     background-color: white;
     padding: 16px;
     border-radius: 10px;
-    border-left: 5px solid rgb(237, 215, 51)
+    border-left: 5px solid rgb(237, 215, 51);
+    display: flex;
+    flex-direction: column;
+}
+
+.card h4 {
+    padding-bottom: 16px;
 }
 
 .card .project-icons {
+    margin-top: auto;
+    align-self: flex-end;
     display: flex;
     justify-content: flex-end;
     padding: 8px;
     gap: 4px;
+}
+
+.card > p, .side-card > p {
+    font-size: 0.9rem;
+    color: grey;
 }
 
 .card .project-icons img:hover {
@@ -202,19 +217,13 @@
 }
 
 .side-content {
-    display: flex;
-    flex-direction: column;
-    padding: 16px;
-}
-
-
-.announcements {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-rows: auto;
+    padding: 24px;
     gap: 16px;
 }
 
-.trending {
-    display: flex;
-    flex-direction: column;
+.side-card {
+    background-color: white;
+    border-radius: 10px;
 }
