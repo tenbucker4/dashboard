@@ -20,7 +20,7 @@
     display: grid;
     grid-template-columns: 2fr 1fr;
     grid-template-rows: 2 1fr;
-    gap: 32px;
+    gap: 16px;
 }
 
 .search-bar {
@@ -173,7 +173,7 @@
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto 1fr;
     gap: 16px;
-    padding: 16px;
+    padding: 24px;
 }
 
 .projects p {
@@ -184,10 +184,9 @@
     height: fit-content;
     width: fit-content;
     background-color: white;
-}
-
-.card h3, .card p {
-    padding: 8px;
+    padding: 16px;
+    border-radius: 10px;
+    border-left: 5px solid rgb(237, 215, 51)
 }
 
 .card .project-icons {
