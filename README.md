@@ -1,1 +1,1 @@
-# dashboard
+A mock admin dashboard created with HTML and CSS! This project allowed me to practice my new skills in CSS Grid and combine it with Flexbox. 
